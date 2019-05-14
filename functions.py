@@ -33,6 +33,7 @@ def prompt():
 def graph_values(reader, dates, highs, lows):
     """Store the graph values of when the high, low temp occured"""
     for row in reader:
+        current_date = ''
         try:
             current_date = datetime.strptime(row[0], "%Y-%m-%d")
             high = int(row[1])
